@@ -262,4 +262,40 @@ class RekeningController extends Controller
   {
     return Excel::download(new RekeningExport, 'rekening.xlsx');
   }
+
+  public function batchDelete(Request $request)
+  {
+    $validated = $request->validate([
+      'ids' => 'required|array|min:1',
+      'ids.*' => 'exists:rekenings,id',
+    ]);
+
+    try {
+      $rekenings = Rekening::whereIn('id', $validated['ids'])->get();
+
+      foreach ($rekenings as $rekening) {
+        if ($rekening->foto_ktp) {
+          Storage::disk('public')->delete($rekening->foto_ktp);
+        }
+
+        if ($rekening->foto_kartu_atm) {
+          Storage::disk('public')->delete($rekening->foto_kartu_atm);
+        }
+
+        if ($rekening->foto_token) {
+          Storage::disk('public')->delete($rekening->foto_token);
+        }
+
+        if ($rekening->foto_buku_tabungan) {
+          Storage::disk('public')->delete($rekening->foto_buku_tabungan);
+        }
+      }
+
+      $deletedCount = Rekening::whereIn('id', $validated['ids'])->delete();
+
+      return redirect()->route('rekening.index')->with('info', "$deletedCount data berhasil dihapus!");
+    } catch (\Exception $e) {
+      return redirect()->route('rekening.index')->with('error', "Terjadi kesalahan: " . $e->getMessage());
+    }
+  }
 }

@@ -28,6 +28,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', AuthorizationMiddleware::class])->group(function () {
     Route::resource('rekening', RekeningController::class);
+    Route::post('/rekening/batch-delete', [RekeningController::class, 'batchDelete'])->name('rekening.batchDelete');
     Route::get('export-rekening', [RekeningController::class, 'export'])->name('rekening.export');
 });
 

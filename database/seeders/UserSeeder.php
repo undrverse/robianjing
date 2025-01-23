@@ -11,26 +11,26 @@ class UserSeeder extends Seeder
     {
         // Membuat akun admin
         User::create([
-            'name' => 'Pengguna Admin',
-            'email' => 'admin@mail.com',
-            'password' => bcrypt('12345678'),
+            'name' => 'User Admin',
+            'email' => 'admin1933@mail.com',
+            'password' => bcrypt('JanganLupa1933!!'),
             'usertype' => 'admin',
         ]);
 
-        // Membuat akun supervisor
-        User::create([
-            'name' => 'Pengguna Supervisor',
-            'email' => 'supervisor@mail.com',
-            'password' => bcrypt('12345678'),
-            'usertype' => 'supervisor',
-        ]);
+        // // Membuat akun supervisor
+        // User::create([
+        //     'name' => 'Pengguna Supervisor',
+        //     'email' => 'supervisor@mail.com',
+        //     'password' => bcrypt('12345678'),
+        //     'usertype' => 'supervisor',
+        // ]);
 
-        // Membuat akun user
-        User::create([
-            'name' => 'Pengguna User',
-            'email' => 'user@mail.com',
-            'password' => bcrypt('12345678'),
-            'usertype' => 'user',
-        ]);
+        // // Membuat akun user
+        // User::create([
+        //     'name' => 'Pengguna User',
+        //     'email' => 'user@mail.com',
+        //     'password' => bcrypt('12345678'),
+        //     'usertype' => 'user',
+        // ]);
     }
 }

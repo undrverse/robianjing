@@ -1,0 +1,1 @@
+function s(t){if(!t)return"";const r=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"],e=new Date(t);if(isNaN(e.getTime()))return t;const n=e.getDate(),o=r[e.getMonth()],a=e.getFullYear();return`${n} ${o} ${a}`}export{s as f};

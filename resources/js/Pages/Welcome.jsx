@@ -42,17 +42,17 @@ export default function Welcome({ auth }) {
 				</header>
 				<main>
 					<div>
-						<div class="mx-auto max-w-2xl">
-							<div class="hidden sm:mb-8 sm:flex sm:justify-center">
-								<div class="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-2 ring-slate-200 dark:ring-indigo-600 hover:ring-slate-100 dark:hover:ring-indigo-400">
+						<div className="mx-auto max-w-2xl">
+							<div className="hidden sm:mb-8 sm:flex sm:justify-center">
+								<div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-2 ring-slate-200 dark:ring-indigo-600 hover:ring-slate-100 dark:hover:ring-indigo-400">
 									Solusi pengelolaan data yang cerdas untuk bisnis Anda.
 								</div>
 							</div>
-							<div class="text-center">
-								<h1 class="text-4xl px-6 sm:px-0 font-bold tracking-tight  text-white dark:text-indigo-100 sm:text-6xl">
+							<div className="text-center">
+								<h1 className="text-4xl px-6 sm:px-0 font-bold tracking-tight  text-white dark:text-indigo-100 sm:text-6xl">
 									Tingkatkan produktivitas tim Anda.
 								</h1>
-								<p class="mt-6 px-6 sm:px-0 text-xl leading-8 text-blue-900 font-bold dark:text-blue-200">
+								<p className="mt-6 px-6 sm:px-0 text-xl leading-8 text-blue-900 font-bold dark:text-blue-200">
 									Kelola data Anda dengan lebih efisien. Fitur pencarian,
 									pelaporan, dan visualisasi data yang akurat.
 								</p>
@@ -61,12 +61,7 @@ export default function Welcome({ auth }) {
 					</div>
 				</main>
 				<footer className="sm:mb-[1rem] text-center lg:text-lg font-bold text-blue-950 dark:text-white/70">
-					Develop By{" "}
-					<a
-						href="https://github.com/AriaPutra01"
-						className="text-red-600 hover:text-blue-600 hover:font-bold">
-						AriaPutra01
-					</a>
+					<p>Copyright &copy; 2025</p>
 				</footer>
 			</div>
 		</>

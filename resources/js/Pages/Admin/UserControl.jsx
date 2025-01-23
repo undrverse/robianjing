@@ -33,7 +33,7 @@ export default function UserControl({ users, attributes }) {
 	const ActionButton = {
 		header: "Action",
 		cell: (field) => (
-			<td className="px-4 py-3 absolute z-10 top-[.5rem] left-[1rem]">
+			<td className="px-4  absolute top-1/2 -translate-y-1/2">
 				<button
 					onClick={() => handleButtonAction(field.id)}
 					className="relative inline-flex items-center p-0.5 text-sm font-medium text-center text-slate-500 hover:text-slate-800 rounded-lg focus:outline-none dark:text-slate-400 dark:hover:text-slate-100"
@@ -253,7 +253,7 @@ export default function UserControl({ users, attributes }) {
 						data={DataUser}
 						field={users}
 						attributes={cell}
-						TopTable={TopTable()}
+						TopTableRight={TopTable()}
 					/>
 				</div>
 			</div>

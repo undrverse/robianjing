@@ -1,0 +1,1 @@
+import{j as a}from"./app-Dj-x9gWf.js";function m({value:t,className:e="",children:s,...l}){return a.jsx("label",{...l,className:"w-full block font-medium text-sm text-slate-700 dark:text-slate-300 "+e,children:t||s})}export{m as I};
