@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('supplier')->nullable();
             $table->string('no_rek')->nullable();
             $table->string('nama_ibu')->nullable();
-            $table->string('no_hp')->nullable();
             $table->string('email')->nullable();
             $table->string('password')->nullable();
             $table->string('no_hp')->nullable();
